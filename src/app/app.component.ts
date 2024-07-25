@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app-gestion-de-turnos';
+  
+  listaTurnos: any[] = [];
+
+  agregarTurno(turno: any){
+    this.listaTurnos.push(turno);
+  }
+
+  eliminarTurnolistado (index:number){
+    this.listaTurnos.splice(index, 1);
+  }
 }
